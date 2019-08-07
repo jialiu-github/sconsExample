@@ -1,0 +1,5 @@
+env = Environment(CPPPATH=['/usr/gtest/include'])
+common_libs = ['gtest_main', 'gtest']
+env.Append( LIBS = common_libs )
+
+env.Program('Program',  Glob('*.cc'))
